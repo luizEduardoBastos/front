@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const deleteProductForm = document.getElementById("delete-product-form");
   async function fetchProducts() {
     try {
-      const response = await fetch("http://18.188.146.223:3000/products");
+      const response = await fetch("http://18.118.28.222:3000/products");
       if (!response.ok) throw new Error('Network response was not ok');
       const products = await response.json();
       renderProducts(products);
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function addProduct(name, price, description) {
     try {
-      const response = await fetch("http://18.188.146.223:3000/products", {
+      const response = await fetch("http://18.118.28.222:3000/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function deleteProduct(id) {
     try {
-      const response = await fetch(`http://18.188.146.223:3000/products/${id}`, {
+      const response = await fetch(`http://18.118.28.222:3000/products/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function updateProduct(id, name, price, description) {
     try {
-      const response = await fetch(`http://18.188.146.223:3000/products/${id}`, {
+      const response = await fetch(`http://18.118.28.222:3000/products/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
