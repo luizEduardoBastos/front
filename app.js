@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const updateProductPrice = document.getElementById("update-price");
   const updateProductDescription = document.getElementById("update-description");
   const deleteProductForm = document.getElementById("delete-product-form");
-
   async function fetchProducts() {
     try {
       const response = await fetch("http://18.188.146.223:3000/products");
